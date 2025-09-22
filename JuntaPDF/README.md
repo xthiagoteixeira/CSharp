@@ -32,7 +32,7 @@ O JuntaPDF é uma ferramenta desktop desenvolvida em C# com Windows Forms que pe
 **Solução**: Instale o pacote `itext.bouncy-castle-adapter`
 
 
-### PDFs não são mesclados corretamente
+## PDFs não são mesclados corretamente
 
 **Verificações**:
 - Certifique-se de que todos os arquivos PDF são válidos
