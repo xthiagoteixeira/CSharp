@@ -1,6 +1,6 @@
 # JuntaPDF
 
-Uma aplicação Windows Forms simples e eficiente para mesclar múltiplos arquivos PDF em um único documento.
+Buscando facilitar o dia a dia no ambiente de trabalho, criei e disponibilizei gratuitamente um aplicativo desktop para unificação de PDFs, oferecendo eficiência e máxima proteção dos dados. Desenvolvido para funcionamento local, elimina riscos de vazamento e custos adicionais, sendo uma solução prática para times que precisam lidar com manipulação frequente de arquivos PDF. Uma aplicação Windows Forms simples e eficiente para mesclar múltiplos arquivos PDF em um único documento.
 
 ## 📋 Sobre o Projeto
 
