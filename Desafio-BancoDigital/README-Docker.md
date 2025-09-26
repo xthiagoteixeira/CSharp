@@ -98,37 +98,6 @@ Após a inicialização, os serviços estarão disponíveis em:
 - **User**: SYSTEM
 - **Password**: BancoDigital123
 
-### Contas de Teste Pré-cadastradas:
-
-| ID | CPF | Nome | Saldo Inicial | Senha |
-|----|-----|------|---------------|-------|
-| 1 | 12345678901 | João Silva | R$ 5.000,00 | 123456 |
-| 2 | 19632055888 | Maria Santos | R$ 4.500,00 | 123456 |
-| 3 | 98765432100 | Pedro Oliveira | R$ 3.000,00 | 123456 |
-
-## 🧪 Testando o Sistema
-
-### 1. Login (obter token JWT):
-```bash
-curl -X POST http://localhost:5222/api/conta/login \
-  -H "Content-Type: application/json" \
-  -d '{"cpf":"19632055888","senha":"123456"}'
-```
-
-### 2. Consultar Saldo:
-```bash
-curl -X GET http://localhost:5222/api/movimento/saldo/2 \
-  -H "Authorization: Bearer SEU_TOKEN_AQUI"
-```
-
-### 3. Fazer Transferência:
-```bash
-curl -X POST http://localhost:5037/api/transferencia/transferir \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer SEU_TOKEN_AQUI" \
-  -d '{"contaDestinoId":3,"valor":100.00,"chaveIdempotencia":"test-001"}'
-```
-
 ## 📊 Monitoramento
 
 ### Verificar Status dos Containers:
