@@ -1,0 +1,64 @@
+### Api Conta Corrente - Requests de Teste
+
+### 1. Cadastrar Conta Corrente
+POST https://localhost:7278/api/conta/cadastrar
+Content-Type: application/json
+
+{
+  "cpf": "12345678901",
+  "senha": "minhasenha123"
+}
+
+### 2. Login
+POST https://localhost:7278/api/conta/login
+Content-Type: application/json
+
+{
+  "cpf": "12345678901",
+  "senha": "minhasenha123"
+}
+
+### 3. Movimentar Conta (Crédito) - Necessita JWT Token
+POST https://localhost:7123/api/movimento/movimentar
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "contaId": 1,
+  "tipoMovimento": "C",
+  "valor": 500.00
+}
+
+### 4. Movimentar Conta (Débito) - Necessita JWT Token
+POST https://localhost:7123/api/movimento/movimentar
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "contaId": 1,
+  "tipoMovimento": "D",
+  "valor": 100.00
+}
+
+### 5. Consultar Saldo - Necessita JWT Token
+GET https://localhost:7278/api/movimento/saldo/1
+Authorization: Bearer {{token}}
+
+### 6. Consultar Extrato - Necessita JWT Token
+GET https://localhost:7123/api/movimento/extrato/1
+Authorization: Bearer {{token}}
+
+### 7. Consultar Extrato com Filtro de Data - Necessita JWT Token
+GET https://localhost:7278/api/movimento/extrato/1?dataInicio=2024-01-01&dataFim=2024-12-31
+Authorization: Bearer {{token}}
+
+### 8. Inativar Conta - Necessita JWT Token
+PUT https://localhost:7278/api/conta/inativar/1
+Authorization: Bearer {{token}}
+
+### Observações:
+# 1. Substitua {{token}} pelo JWT token obtido no login
+# 2. A porta pode variar conforme configuração do launchSettings.json
+# 3. O CPF deve ter 11 dígitos válidos
+# 4. TipoMovimento: "C" para Crédito, "D" para Débito
+# 5. Para usar este arquivo, instale a extensão REST Client no VS Code
